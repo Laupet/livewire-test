@@ -25,4 +25,4 @@ require __DIR__ . '/auth.php';
 
 Route::get('/users', function () {
     return view('users');
-})->name('users');
+})->middleware(['auth'])->name('users');
