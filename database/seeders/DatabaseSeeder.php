@@ -12,5 +12,12 @@ class DatabaseSeeder extends Seeder {
      * @return void
      */
     public function run() {
+        User::factory()->count(50)->state([
+            'created_at' => fn () => now()->subminutes(rand(0, 59))
+        ])->create();
+
+        // User::factory()->make()->save(); // FUNKER
+
+        // User::factory()->count(3)->create(); // FUNKER
     }
 }
