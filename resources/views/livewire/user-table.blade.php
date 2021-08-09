@@ -15,8 +15,13 @@
           <table class="min-w-full divide-y divide-gray-200">
             <thead class="bg-gray-50">
               <tr>
-                <th wire:click="sortBy('name')" scope="col" class="cursor-pointer px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Name
+                <th wire:click="sortBy('name')" scope="col" class="flex cursor-pointer px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+
+                    <span class="self-center">
+                        Name
+                    </span>
+                      @svg('heroicon-o-sort-descending', 'w-4 h-4 text-gray-500 ml-1 mt-1')
+
                 </th>
                 <th wire:click="sortBy('email')" scope="col" class="cursor-pointer px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Email
